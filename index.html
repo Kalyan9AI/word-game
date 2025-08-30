@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Missing Letters Game</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <main class="app">
+      <h1>Missing Letters</h1>
+      <div class="topbar">
+        <div id="round-info" aria-live="polite">Round 1 of 10</div>
+        <div id="score">Score: 0</div>
+      </div>
+
+      <section aria-labelledby="puzzle-title" class="puzzle">
+        <h2 id="puzzle-title" class="sr-only">Current puzzle</h2>
+        <div id="masked-word" class="masked-word" aria-live="polite"></div>
+        <div id="inputs" class="inputs" aria-label="Fill the missing letters"></div>
+      </section>
+
+      <section class="controls">
+        <div class="full-guess">
+          <input id="full-guess" type="text" inputmode="text" autocomplete="off" placeholder="Or type the full word" aria-label="Type the full word" />
+        </div>
+        <div class="buttons">
+          <button id="check-btn" class="btn primary">Check</button>
+          <button id="reveal-btn" class="btn">Reveal</button>
+          <button id="next-btn" class="btn success" disabled>Next</button>
+          <button id="restart-btn" class="btn ghost">Restart</button>
+        </div>
+        <div id="message" class="message" aria-live="polite"></div>
+      </section>
+
+      <footer class="footer">
+        <span>Tip: Press Enter to check, or to go Next when available.</span>
+      </footer>
+    </main>
+  </body>
+  </html>
